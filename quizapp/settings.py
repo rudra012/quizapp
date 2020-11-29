@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # https://www.django-rest-framework.org/
+    'rest_framework',
+    # https://drf-yasg.readthedocs.io/en/stable/readme.html#installation
+    'drf_yasg',
+
     # Custom Apps
     'users',
     'quiz',

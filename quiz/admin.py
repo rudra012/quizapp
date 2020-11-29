@@ -1,6 +1,12 @@
 from django.contrib import admin
 
-from quiz.models import Question, Answer, QuizAttempt, Option
+from quiz.models import Question, Answer, QuizAttempt, Option, Quiz
+
+
+@admin.register(Quiz)
+class QuizAdmin(admin.ModelAdmin):
+    list_display = ["id", "name"]
+    list_display_links = ["name"]
 
 
 @admin.register(Question)

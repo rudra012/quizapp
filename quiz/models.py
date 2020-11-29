@@ -3,8 +3,16 @@ from django.db import models
 from users.models import User, BaseModel
 
 
+class Quiz(BaseModel):
+    name = models.CharField(max_length=200, )
+
+    def __str__(self):
+        return self.name
+
+
 class Question(BaseModel):
     question = models.CharField(max_length=200, )
+    quiz = models.ForeignKey(Quiz, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.question
